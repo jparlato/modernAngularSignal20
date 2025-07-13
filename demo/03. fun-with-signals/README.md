@@ -1,6 +1,11 @@
 # FunWithSignals
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+# why use readonly
+
+The readonly keyword refers to the property itself which is a pointer to a signal object. Yes, you can change the content of the signal, but you don't want to replace the signal object with a new one.
+
+In zoneless applications, angular receives notification when signals change their content, but it does not "know" when you switch between one signal to another. And by using the readonly keyword we ask typescript to make sure we stay with the original signal and not replace it, even if we change its content to a new value.
 
 ## Development server
 

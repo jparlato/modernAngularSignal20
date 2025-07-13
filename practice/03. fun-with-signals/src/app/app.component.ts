@@ -7,11 +7,12 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
-  // 8. Set change detection strategy to OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush();
+  
 })
 export class AppComponent {
   // 1. replace with a writeable signal with an initial value of 0
-  readonly firstNumber = undefined; 
+  readonly firstNumber = undefined;
 
   // 2. replace with a writeable signal with an initial value of 0
   readonly secondNumber = undefined;
