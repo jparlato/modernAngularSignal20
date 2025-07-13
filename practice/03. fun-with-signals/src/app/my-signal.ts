@@ -16,5 +16,6 @@ export function mySignal<T>(value: T): MyWriteableSignal<T> {
     value = updater(value);
   };
 
-  return result;
+  return result; // closure
+
 }
